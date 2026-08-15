@@ -1,0 +1,18 @@
+schema: mcpg.dev/plugin/v1
+id: dev.mcpg.catalog.builtin
+name: Builtin Catalog Provider
+license: Apache-2.0
+description: |
+  Config-driven catalog_provider plugin. Operators
+  declare per-tool catalog metadata in YAML — owner, tags,
+  documentation links, sample arguments, trust requirements,
+  approval requirements, maturity. The plugin matches against
+  `tools/list` results at runtime, dropping hidden tools and
+  enriching the rest with MCP `_meta` annotations. Pure offline
+  lookup; no outbound network. Composes with policy_engine for
+  call-time enforcement (catalog filters at presentation; policy
+  enforces at dispatch).
+class: catalog_provider
+runtime: native-cdylib-v1
+protocol_version: "1.0"
+required_capabilities: []
