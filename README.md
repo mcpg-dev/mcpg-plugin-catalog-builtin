@@ -46,7 +46,7 @@ plugins:
     source:
       path: ./plugins/libmcpg_plugin_catalog_builtin.so
       # or, platform-agnostic:
-      # oci: ghcr.io/mcpg-dev/source-code/plugins/catalog-builtin:protocol-1
+      # oci: ghcr.io/mcpg-dev/plugins/catalog-builtin
     config:
       tools:
         orders.search:
